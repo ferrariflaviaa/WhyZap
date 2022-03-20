@@ -1,0 +1,29 @@
+.layout{
+    background-color: red;
+    width: 600px;
+    /* margin: 40px 80px; */
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.pessoa{
+    background-color: aquamarine;
+    width: 15%;
+}
+
+.mensagens{
+    width: 70%;
+}
+
+.enviar{
+    align-items: center;
+    text-align: center;
+    background: #959ca0;
+    color: white;
+    border-style: outset;
+    border-color: #959ca0;
+    text-shadow:none;
+    width: 15%;
+}
