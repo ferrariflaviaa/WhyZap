@@ -28,26 +28,17 @@ function App() {
             if (item.name === 'eu') {
               return (
                 <div className="componenteEu">
-                  
-                    <h1>{item.name}</h1>
-                    
-                    <h1>{item.message}</h1>
-
+                    <h5>{item.name}</h5>
+                    <p>{item.message}</p>
                 </div>
               )
             } else {
               return (
                 <div className="componenteProximo">
-                  
-                    <h1>{item.name}</h1>
-                    
-                    <h1>{item.message}</h1>
-
-                  
-
+                    <h6>{item.name}</h6>
+                    <p>{item.message}</p>
                 </div>
               )
-
             }
           })
         )}
