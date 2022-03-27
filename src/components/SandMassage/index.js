@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from './styled.css';
+import "./styled.css";
+
 
 function SandMassage({ name, setName, message, setMessage, onSandMessage }) {
 
