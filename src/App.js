@@ -1,47 +1,55 @@
-import React, { useState } from 'react';
-import './App.css';
-import SandMassage from './components/SandMassage'
+import React, { useState } from "react";
+import "./App.css";
+import SandMassage from "./components/SandMassage";
 
 function App() {
-
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-  const [arr, setArr] = useState([]);
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [arr, setArr] = useState([
+    { name: "SandMassage", message: "hdbehbd" },
+    { name: "SandMassage", message: "hdbehbd" },
+    { name: "SandMassage", message: "hdbehbd" },
+    { name: "SandMassage", message: "hdbehbd" },
+    { name: "SandMassage", message: "hdbehbd" },
+  ]);
 
   function handleSandMassage() {
     if (!!name && !!message) {
       let objMessage = {
         name,
-        message
-      }
-      setArr([...arr, objMessage])
-      setName('');
-      setMessage('');
+        message,
+      };
+      setArr([...arr, objMessage]);
+      setName("");
+      setMessage("");
     }
   }
 
   return (
     <div className="Container">
       <div className="Container-mensagens">
-        {arr.length > 0 && (
+        {arr.length > 0 &&
           arr.map((item) => {
-            if (item.name === 'eu') {
+            if (item.name === "eu") {
               return (
-                <div className="componenteEu">
+                <div className="Container-componente-Eu">
+                  <div className="componenteEu">
                     <h5>{item.name}</h5>
                     <p>{item.message}</p>
+                  </div>
                 </div>
-              )
+              );
             } else {
               return (
-                <div className="componenteProximo">
+                <div className="Container-componente-Proximo">
+                  <div className="componenteProximo">
                     <h6>{item.name}</h6>
                     <p>{item.message}</p>
+                  </div>
                 </div>
-              )
+              );
             }
-          })
-        )}
+          })}
       </div>
 
       <SandMassage
@@ -50,7 +58,6 @@ function App() {
         setName={setName}
         message={message}
         setMessage={setMessage}
-
       />
     </div>
   );

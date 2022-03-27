@@ -10,13 +10,12 @@
 }
 .Container-mensagens{
   width: 600px;
-  height: 90vh;
-  display: flex;
-  align-items: center;
+  height: 30vh;
+  justify-content: flex-end;
   flex-direction: column;
   margin-bottom: 20px; 
   background-color: #D6D58E;
-
+  overflow-y: scroll;
 }
 .Container{
   margin-top: 20px;
@@ -24,9 +23,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background: green; */
+}
+
+.Container-componente-Eu{
+  display: flex;
+  margin: 15px 0;
 }
 .componenteEu{
+  margin-left: auto;
   background-color: #61dafb;
   max-width: 100px;
   min-width: 100px;
@@ -35,12 +39,15 @@
   align-items: center;
   justify-content: center;
   align-self: flex-end;
-  margin-bottom: 10px;
   flex-direction: column;
-  /* overflow: auto; */
-
+  /* justify-content: flex-end; */
 }
 
+.Container-componente-Proximo{
+  display: flex;
+  align-items: flex-end;
+  margin: 15px 0;
+}
 .componenteProximo{
   background-color: #61dafb;
   min-width: 100px;
@@ -52,7 +59,4 @@
   flex-direction: column;
   box-sizing: 20px;
   margin-bottom: 10px;
-  
-  /* overflow: auto; */
-
 }
