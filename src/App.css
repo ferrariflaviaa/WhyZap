@@ -8,14 +8,23 @@
 .App {
   text-align: center;
 }
+
+/* .ContainerDisplay{
+  width: 600px;
+  display: flex;
+  height: 90vh;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: green;
+} */
+
 .Container-mensagens{
   width: 600px;
-  height: 30vh;
-  justify-content: flex-end;
-  flex-direction: column;
+  height: 90vh;
   margin-bottom: 20px; 
-  background-color: #D6D58E;
   overflow-y: scroll;
+  background-color: #D6D58E;
+
 }
 .Container{
   margin-top: 20px;
@@ -23,10 +32,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .Container-componente-Eu{
   display: flex;
+  align-self: flex-end;
   margin: 15px 0;
 }
 .componenteEu{
@@ -40,7 +51,7 @@
   justify-content: center;
   align-self: flex-end;
   flex-direction: column;
-  /* justify-content: flex-end; */
+  cursor: pointer;
 }
 
 .Container-componente-Proximo{
@@ -59,4 +70,6 @@
   flex-direction: column;
   box-sizing: 20px;
   margin-bottom: 10px;
+  cursor: pointer;
+
 }
