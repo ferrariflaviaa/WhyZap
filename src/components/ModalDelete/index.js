@@ -1,5 +1,5 @@
 import React from "react";
-import "./styled.css";
+import { ContainerModal, Content, TitlePri, RowItens} from "./styled";
 
 function ModalDelete({ removeItem, handleCloseModal }) {
   console.log(handleCloseModal);
@@ -10,15 +10,15 @@ function ModalDelete({ removeItem, handleCloseModal }) {
   };
 
   return (
-    <div className="ContainerModal">
-      <div className="Content">
-        <h4 className="title">Deseja excluir a mensagem?</h4>
-        <div className="row-itens">
-          <span className="fecha" onClick={handleCloseModal}>Não </span>
-          <span className="executar" onClick={deleteMessage}>Sim</span>
-        </div>
-      </div>
-    </div>
+    <ContainerModal>
+      <Content>
+        <TitlePri>Deseja excluir a mensagem?</TitlePri>
+        <RowItens>
+          <span onClick={handleCloseModal}>Não </span>
+          <span onClick={deleteMessage}>Sim</span>
+        </RowItens>
+      </Content>
+    </ContainerModal>
   );
 }
 

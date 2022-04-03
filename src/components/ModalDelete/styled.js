@@ -1,4 +1,6 @@
-.ContainerModal {
+import styled from "styled-components";
+
+export const ContainerModal = styled.div`
   background-color: red;
   position: fixed;
   top: 0;
@@ -7,9 +9,11 @@
   left: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 99;
-}
+`
+  
 
-.Content {
+
+export const Content = styled.div`
   display: flex;
   width: 20%;
   justify-content: center;
@@ -25,14 +29,14 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-}
-.title{
+`
+export const TitlePri = styled.div`
     text-align: center;
-}
+`
 
-.row-itens{
+export const RowItens = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   cursor: pointer;
-}
+`

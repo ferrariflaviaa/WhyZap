@@ -5,11 +5,10 @@ import SandMassage from "./components/SandMassage";
 import ModalDelete from "./components/ModalDelete";
 
 function App() {
+
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [arr, setArr] = useState([
-    { id: "1yh89-oundfcf", name: "SandMassage", message: "hdbehbd" },
-  ]);
+  const [arr, setArr] = useState([]);
   const [click, setClick] = useState(0);
   const [select, setSelect] = useState({});
   const [openModal, setOpenModal] = useState(false);
@@ -54,7 +53,6 @@ function App() {
   };
 
   const removeItem = () => {
-    alert("Funciona")
     setDeleteMessageArr(!deleteMessageArr);
   };
 

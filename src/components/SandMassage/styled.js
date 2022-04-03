@@ -1,4 +1,6 @@
-.layout{
+import styled from "styled-components";
+
+export const Layout = styled.div `
     background-color: red;
     width: 600px;
     height: 100%;
@@ -6,19 +8,23 @@
     display: flex;
     justify-content: space-between;
     position: relative; 
-}
+`
 
-.pessoa{
-    background-color: aquamarine;
-    width: 15%;
-}
+export const Pessoa = styled.input`
+background-color: aquamarine;
+width: 15%;
+height: 100%;
 
-.mensagens{
+`
+
+
+export const Mensagens = styled.input`
     width: 70%;
-}
+`
 
-.enviar{
+export const Enviar = styled.button`
     align-items: center;
+    cursor: pointer;
     text-align: center;
     background: #959ca0;
     color: white;
@@ -26,4 +32,4 @@
     border-color: #959ca0;
     text-shadow:none;
     width: 15%;
-}
+`
