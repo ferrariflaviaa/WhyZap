@@ -48,6 +48,12 @@ function App() {
     setDeleteMessageArr(false);
   }
 
+  const handleKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      handleSandMassage();
+    }
+  }
+
   const renderModal = () => {
     setOpenModal(!openModal);
   };
@@ -58,6 +64,7 @@ function App() {
 
   useEffect(() => {
     deleteMessage(select);
+    
   },[deleteMessageArr])
 
   //Verifica os clicks em tempo real
@@ -77,7 +84,7 @@ function App() {
               return (
                 <div
                   className="Container-componente-Eu"
-                  onClick={() => handleClick(item)}
+                  onClick={() => handleClick(item)}  
                 >
                   <div className="componenteEu">
                     <p>{item.message}</p>
@@ -106,6 +113,7 @@ function App() {
         setName={setName}
         message={message}
         setMessage={setMessage}
+        handleKeyPress={handleKeyPress}
       />
 
       {openModal && 

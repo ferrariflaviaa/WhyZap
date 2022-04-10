@@ -1,24 +1,30 @@
-import React from 'react';
-import { Layout,Pessoa,Mensagens,Enviar} from "./styled";
+import React from "react";
+import { Layout, Pessoa, Mensagens, Enviar } from "./styled";
 
+function SandMassage({ name, setName, message, setMessage, onSandMessage, handleKeyPress }) {
+  return (
+    <div>
+      <Layout>
+        <Pessoa
+          value={name}
+          onChange={(text) => setName(text.target.value)}
+          type="text"
+          name="pessoa"
+        />
 
-function SandMassage({ name, setName, message, setMessage, onSandMessage }) {
-
-    return (
-        <div>
-            <Layout>
-                <Pessoa value={name} onChange={text => setName(text.target.value)} type="text" name="pessoa" />
-                <Mensagens value={message} onChange={text => setMessage(text.target.value)} type="text" name="mensagens" />
-                <Enviar type="submit" value="enviar"
-                onClick={onSandMessage}>
-                    Enviar
-                </Enviar>
-            </Layout>
-        </div>
-
-    )
-
-
+        <Mensagens
+          value={message}
+          onChange={(text) => setMessage(text.target.value)}
+          type="text"
+          name="mensagens"
+          onKeyPress={handleKeyPress}
+        />
+        <Enviar type="submit" value="enviar" onClick={onSandMessage}>
+          Enviar
+        </Enviar>
+      </Layout>
+    </div>
+  );
 }
 
 export default SandMassage;
