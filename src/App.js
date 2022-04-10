@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import "./App.css";
+import { Container, ContainerMensagens, ContainerComponenteEu, ComponenteEu, ContainerComponenteProximo, ComponenteProximo } from "./styledApp.js";
+import "./index.css"
 import SandMassage from "./components/SandMassage";
 import ModalDelete from "./components/ModalDelete";
 
@@ -76,36 +77,34 @@ function App() {
   }, [click]);
 
   return (
-    <div className="Container">
-      <div className="Container-mensagens">
+    <Container>
+      <ContainerMensagens>
         {arr.length > 0 &&
           arr.map((item) => {
             if (item.name === "eu") {
               return (
-                <div
-                  className="Container-componente-Eu"
+                <ContainerComponenteEu
                   onClick={() => handleClick(item)}  
                 >
-                  <div className="componenteEu">
+                  <ComponenteEu>
                     <p>{item.message}</p>
-                  </div>
-                </div>
+                  </ComponenteEu>
+                </ContainerComponenteEu>
               );
             } else {
               return (
-                <div
-                  className="Container-componente-Proximo"
+                <ContainerComponenteProximo
                   onClick={() => handleClick(item)}
                 >
-                  <div className="componenteProximo">
+                  <ComponenteProximo>
                     <h6>{item.name}</h6>
                     <p>{item.message}</p>
-                  </div>
-                </div>
+                  </ComponenteProximo>
+                </ContainerComponenteProximo>
               );
             }
           })}
-      </div>
+      </ContainerMensagens>
 
       <SandMassage
         onSandMessage={handleSandMassage}
@@ -121,7 +120,7 @@ function App() {
       handleCloseModal={renderModal}
       removeItem={removeItem}
       />  }
-    </div>
+    </Container>
   );
 }
 

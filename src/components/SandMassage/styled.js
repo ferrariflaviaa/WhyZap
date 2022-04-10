@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Layout = styled.div `
     background-color: red;
     width: 600px;
-    height: 100%;
+    height: 5%;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     position: relative; 
 `
+
 
 export const Pessoa = styled.input`
 background-color: aquamarine;

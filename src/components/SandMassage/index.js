@@ -3,7 +3,6 @@ import { Layout, Pessoa, Mensagens, Enviar } from "./styled";
 
 function SandMassage({ name, setName, message, setMessage, onSandMessage, handleKeyPress }) {
   return (
-    <div>
       <Layout>
         <Pessoa
           value={name}
@@ -23,7 +22,6 @@ function SandMassage({ name, setName, message, setMessage, onSandMessage, handle
           Enviar
         </Enviar>
       </Layout>
-    </div>
   );
 }
 
